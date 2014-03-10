@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:scaleType="matrix"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="choos a map"/>
+
+        <Spinner
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Spinner>
+
+    </LinearLayout>
+   <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+         
+         <Button
+            android:id="@+id/action_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onPick"
+            android:text="选点" />
+         
+         <Button
+            android:id="@+id/action_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onStart"
+            android:text="开始录入" />
+         
+          <Button
+            android:id="@+id/action_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onEnd"
+            android:text="保存" />
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/action_delete"
+           android:onClick="onDelete"
+           android:text="清除上一条"/>
+    </LinearLayout>
+
+
+	<TextView
+            android:id="@+id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Please Choose a Point." />
+
+</LinearLayout>
